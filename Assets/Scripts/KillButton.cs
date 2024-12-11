@@ -15,7 +15,7 @@ public class KillButton : MonoBehaviour
 
     }
 
-    public void Damage()
+    void Damage()
     {
         // Code to handle the attack, such as damaging the player
         player.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
