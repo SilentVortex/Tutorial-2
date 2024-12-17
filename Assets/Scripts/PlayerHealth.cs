@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth = 100.0f;
+    [SerializeField] float maxHealth = 100.0f;
     public float currentHealth = 100.0f;
     public GameObject deathScreen;
     public GameObject gameUI;
@@ -16,10 +15,19 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        // Checks if the player's health is 0, if so then call the die method below
         currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
-
+    void Die()
+    {
+        gameObject.SetActive(false);
+        gameUI.SetActive(false);
+        Time.timeScale = 0f;
+        deathScreen.SetActive(true);
+    }
 
 }
