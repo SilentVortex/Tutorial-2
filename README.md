@@ -1,6 +1,8 @@
 # How to make a UI element that show your health as text
 
-Today we are going to make a Health UI in unity 2D, this tutorial includes a death menu that can take you back to the main menu as well as handling the player's death. The version I will be using for this is 2022.3.46f1.
+Today we are going to make a Health UI in unity 2D, this tutorial includes a death menu that can be coded to take you back to the main menu as well as handling the player's death. This tutorial does not show you how to code the death screen to take you back to the main menu, only the UI for it. 
+
+The version I will be using for this is 2022.3.46f1.
 
 The first thing that we are going to do is make the required items in the hierarchy. We need to first make an empty game object. We will use this to keep our scene organised and hold our two canvases. You can find both of these in the image below.
 
